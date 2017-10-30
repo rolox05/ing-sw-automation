@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+	<testplan>
+		<name><![CDATA[Plan de pruebas Alquiler videos]]></name>
+		
+	<testproject>		<name><![CDATA[Alquiler de videos]]></name>		<prefix><![CDATA[ISTest]]></prefix>		<internal_id><![CDATA[2]]></internal_id>
+	</testproject>
+		
+	<build>		<name><![CDATA[Build]]></name>		<internal_id><![CDATA[3]]></internal_id>
+	</build>
+		<testsuites>
+	<testsuite name="Alquiler de videos" >
+		<node_order><![CDATA[1]]></node_order>
+		<details><![CDATA[<p>Testing de sistema de alquiler de videos</p>
+]]>
+		</details>
+<testcase internalid="7" name="Login user sin tarjeta">
+	<node_order><![CDATA[1000]]></node_order>
+	<exec_order><![CDATA[1]]></exec_order>
+	<externalid><![CDATA[1]]></externalid>
+	<fullexternalid><![CDATA[]]></fullexternalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<ol>
+	<li><strong>Se introduce el n&uacute;mero de cuenta por el teclado</strong></li>
+</ol>
+]]></summary>
+	<preconditions><![CDATA[<p>Usuario registrado en el sistema</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration>50.00</estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p><strong>Se introduce el n&uacute;mero de cuenta por el teclado</strong></p>
+]]></actions>
+	<expectedresults><![CDATA[<p><strong>Busca en el registro de transacciones el N&uacute;mero de cuenta: 0424758 y recupera todas las transacciones asociadas a ese valor (Inscrito - 27/07/2017)</strong></p>
+
+<p>&nbsp;</p>
+
+<p><strong>Muestra en pantalla las transacciones realizadas por el cliente</strong></p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="11" name="Alquilar por codigo de barras">
+	<node_order><![CDATA[1001]]></node_order>
+	<exec_order><![CDATA[1]]></exec_order>
+	<externalid><![CDATA[2]]></externalid>
+	<fullexternalid><![CDATA[]]></fullexternalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p><strong>Se introduce el c&oacute;digo de barras de cada video que el cliente va a alquilar y se genera el alquiler correspondiente</strong></p>
+]]></summary>
+	<preconditions><![CDATA[<ul>
+	<li>
+	<p><strong>Se debe haber iniciado el programa.</strong></p>
+	</li>
+	<li>
+	<p><strong>Se debe haber identificado al cliente mediante la tarjeta PLATA</strong></p>
+	</li>
+</ul>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[3]]></importance>
+	<estimated_exec_duration>30.00</estimated_exec_duration>
+	<status>2</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p><strong>Se introduce el c&oacute;digo de barras (identificador) del video</strong></p>
+]]></actions>
+	<expectedresults><![CDATA[<p><strong>Busca en la base de datos el c&oacute;digo del video y el precio de alquiler.</strong></p>
+
+<p><strong>Muestra en pantalla el mensaje: &ldquo;Nombre del video, Precio del video&rdquo;</strong></p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="15" name="Cobrar alquiler">
+	<node_order><![CDATA[1002]]></node_order>
+	<exec_order><![CDATA[1]]></exec_order>
+	<externalid><![CDATA[3]]></externalid>
+	<fullexternalid><![CDATA[]]></fullexternalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p><strong>El vendedor recibe el dinero del cliente e introduce la cantidad recibida en el sistema.</strong></p>
+]]></summary>
+	<preconditions><![CDATA[<p><strong>Se debe haber iniciado el programa.</strong></p>
+
+<p><strong>&middot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Se debe haber identificado al cliente</strong></p>
+
+<p><strong>&middot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Se deben haber cargado todos los videos </strong></p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[1]]></importance>
+	<estimated_exec_duration>15.00</estimated_exec_duration>
+	<status>3</status>
+	<is_open>1</is_open>
+	<active>1</active>
+
+</testcase>
+
+<testcase internalid="17" name="Actualizar inventario al alquilar">
+	<node_order><![CDATA[1003]]></node_order>
+	<exec_order><![CDATA[1]]></exec_order>
+	<externalid><![CDATA[4]]></externalid>
+	<fullexternalid><![CDATA[]]></fullexternalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p><strong>Cuando el vendedor presiona la tecla de la opci&oacute;n &ldquo;orden completa&rdquo; (definida por el sistema) el alquiler se completa y el archivo de inventario de videos es actualizado.</strong></p>
+]]></summary>
+	<preconditions><![CDATA[<p><strong>Se debe haber iniciado el programa .</strong></p>
+
+<p><strong>&middot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Se debe haber identificado al cliente</strong></p>
+
+<p><strong>&middot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Se deben haber cargado todos los videos</strong></p>
+
+<p><strong>&middot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Se debe haber gestionado el pago y entrega de cambio al cliente de la orden</strong></p>
+
+<p>&nbsp;</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[3]]></importance>
+	<estimated_exec_duration>80.00</estimated_exec_duration>
+	<status>2</status>
+	<is_open>1</is_open>
+	<active>1</active>
+
+</testcase>
+</testsuite></testsuites>
+
+	</testplan>
